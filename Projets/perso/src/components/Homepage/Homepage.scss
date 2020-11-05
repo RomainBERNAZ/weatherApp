@@ -1,0 +1,105 @@
+.menu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: inline-flex;
+    background-color: #A49C9B;
+    
+    .name {
+        animation:  2s linear;
+        animation-fill-mode: forwards;
+        animation-delay: 5s;
+        margin-left: 10vh;
+        margin-top: 4vh;
+
+        .surname {
+            font-family: Morganite;
+            font-size: 50vh;
+
+            .firstLetter {
+                color: whitesmoke;
+            }
+        }
+
+        .nom {
+            font-family: Morganite;
+            font-size: 400px;
+            color: whitesmoke;
+        }
+
+        .lastname {
+            padding-top: 7vh;
+            margin-top: -23vh;
+            padding-bottom: 35vh;
+            font-family: Morganite;
+            font-size: 50vh;
+
+            .firstLetter {
+                color: whitesmoke;
+            }
+        }
+
+    }
+
+    .navbar{
+        .hamburger{
+            position: absolute;
+            right: 5vw;
+            top: 5vh;
+            i{
+                
+            }
+
+        }
+        
+        .nav{
+            list-style: none;
+            display: none;
+            li{
+                color: black;
+                font-family: Morganite4;
+                font-size: 2rem;
+                letter-spacing: 0.5rem;
+                line-height: rem;
+                
+
+            }
+        }
+    }
+
+    .title {
+        animation: 2s linear;
+        animation-fill-mode: forwards;
+        animation-delay: 5s;
+        position: absolute;
+        top: 35%;
+        left: 60%;
+
+        .webDev {
+            margin-top: -2vh;
+            font-family: Morganite3;
+            font-size: 150px;
+            
+        }
+
+        .design {
+            margin-top: -3vh;
+            color: whitesmoke;
+            font-family: Morganite3;
+            font-size: 150px;
+
+        }
+
+
+        .city {
+            margin-top: -3vh;
+            font-family: Morganite3;
+            font-size: 150px;
+
+        }
+
+    }
+
+
+}
+

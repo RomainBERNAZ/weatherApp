@@ -1,0 +1,98 @@
+.menu {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #A49C9B;
+}
+
+.menu .name {
+  -webkit-animation: 2s linear;
+          animation: 2s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  margin-left: 10vh;
+  margin-top: 4vh;
+}
+
+.menu .name .surname {
+  font-family: Morganite;
+  font-size: 50vh;
+}
+
+.menu .name .surname .firstLetter {
+  color: whitesmoke;
+}
+
+.menu .name .nom {
+  font-family: Morganite;
+  font-size: 400px;
+  color: whitesmoke;
+}
+
+.menu .name .lastname {
+  padding-top: 7vh;
+  margin-top: -23vh;
+  padding-bottom: 35vh;
+  font-family: Morganite;
+  font-size: 50vh;
+}
+
+.menu .name .lastname .firstLetter {
+  color: whitesmoke;
+}
+
+.menu .navbar .hamburger {
+  position: absolute;
+  right: 5vw;
+  top: 5vh;
+}
+
+.menu .navbar .nav {
+  list-style: none;
+  display: none;
+}
+
+.menu .navbar .nav li {
+  color: black;
+  font-family: Morganite4;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  line-height: rem;
+}
+
+.menu .title {
+  -webkit-animation: 2s linear;
+          animation: 2s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  position: absolute;
+  top: 35%;
+  left: 60%;
+}
+
+.menu .title .webDev {
+  margin-top: -2vh;
+  font-family: Morganite3;
+  font-size: 150px;
+}
+
+.menu .title .design {
+  margin-top: -3vh;
+  color: whitesmoke;
+  font-family: Morganite3;
+  font-size: 150px;
+}
+
+.menu .title .city {
+  margin-top: -3vh;
+  font-family: Morganite3;
+  font-size: 150px;
+}
+/*# sourceMappingURL=Homepage.css.map */

@@ -1,0 +1,32 @@
+// Import des feuilles de style liées aux différentes sections.
+@import '../components/Homepage/Homepage.scss','../components/Projects/Projects.scss', './animations.scss';
+
+// Import des polices nécessaires au site. 
+@font-face {
+    font-family: Morganite;
+    src: url("./fonts/Morganite/Morganite-ExtraBold.ttf");
+}
+@font-face {
+    font-family: Morganite2;
+    src: url("./fonts/Morganite/Morganite-Medium.ttf")
+}
+@font-face {
+    font-family: Morganite3;
+    src: url("./fonts/Morganite/Morganite-Light.ttf")
+}
+@font-face {
+    font-family: Morganite4;
+    src: url("./fonts/Morganite/Morganite-Black.ttf")
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}   
+ 

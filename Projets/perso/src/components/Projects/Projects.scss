@@ -1,0 +1,77 @@
+
+
+.bandeau {
+    
+    position: absolute;
+    top: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+
+
+    .photo {
+
+        display: inline-flex;
+        animation:  5s infinite linear;
+
+        .photo01 {
+            padding-left: 2vw;
+            padding-top: 2vh;
+            font-size: 15rem;
+            font-family: Morganite;
+            color: black;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: silver;
+        }
+
+        .photo02 {
+            padding-left: 5vw;
+            padding-top: 2vh;
+            font-size: 15rem;
+            font-family: Morganite;
+            color: silver; 
+        }
+
+        .photo03 {
+            padding-left: 5vw;
+            padding-top: 2vh;
+            font-size: 15rem;
+            font-family: Morganite;
+            color: black;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: silver;
+        }
+
+        .photo04 {
+            padding-left: 5vw;
+            padding-top: 2vh;
+            font-size: 15rem;
+            font-family: Morganite;
+            color: silver;
+        }
+
+        .photo05 {
+            padding-left: 5vw;
+            padding-top: 2vh;
+            font-size: 15rem;
+            font-family: Morganite;
+            color: black;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: silver;
+        }
+    }
+
+}
+.random{
+    padding-top: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: flex;
+    justify-content: space-between;
+    img{
+        height: 25rem;
+        border-radius: 10px;
+        width: 20vw;
+    }
+}

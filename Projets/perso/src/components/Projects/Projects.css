@@ -1,0 +1,80 @@
+.bandeau {
+  position: absolute;
+  top: 100vh;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.bandeau .photo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-animation: 5s infinite linear;
+          animation: 5s infinite linear;
+}
+
+.bandeau .photo .photo01 {
+  padding-left: 2vw;
+  padding-top: 2vh;
+  font-size: 15rem;
+  font-family: Morganite;
+  color: black;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: silver;
+}
+
+.bandeau .photo .photo02 {
+  padding-left: 5vw;
+  padding-top: 2vh;
+  font-size: 15rem;
+  font-family: Morganite;
+  color: silver;
+}
+
+.bandeau .photo .photo03 {
+  padding-left: 5vw;
+  padding-top: 2vh;
+  font-size: 15rem;
+  font-family: Morganite;
+  color: black;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: silver;
+}
+
+.bandeau .photo .photo04 {
+  padding-left: 5vw;
+  padding-top: 2vh;
+  font-size: 15rem;
+  font-family: Morganite;
+  color: silver;
+}
+
+.bandeau .photo .photo05 {
+  padding-left: 5vw;
+  padding-top: 2vh;
+  font-size: 15rem;
+  font-family: Morganite;
+  color: black;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: silver;
+}
+
+.random {
+  padding-top: 10vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.random img {
+  height: 25rem;
+  border-radius: 10px;
+  width: 20vw;
+}
+/*# sourceMappingURL=Projects.css.map */
