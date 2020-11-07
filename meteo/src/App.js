@@ -30,6 +30,7 @@ useEffect (() => {
   
   if (city !== ''){
     fetchData();
+    document.getElementById('span').style.display="inline-flex";
   } else {
     setTemp(null);
     setImage(null);
