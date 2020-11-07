@@ -50,7 +50,7 @@ useEffect (() => {
 
           <input value={input} onChange={e =>setInput(e.target.value)} type="text" placeholder="City..."/>
 
-          <button type="submit"><i class="fas fa-2x fa-search"></i></button>
+          <button type="submit"><i class="fas fa-search"></i></button>
         </form>
         <h2 className="city">{city}</h2>
          <img src={logo} alt=""/> 
