@@ -9,7 +9,7 @@ const [ image, setImage] = useState('');
 const [ temp, setTemp] = useState('');
 const [ city, setCity] = useState('');
 const [ input, setInput] = useState('');
-const logo = "http://openweathermap.org/img/w/" + image + ".png";
+const logo = "https://openweathermap.org/img/w/" + image + ".png";
 
 
 
@@ -19,7 +19,7 @@ useEffect (() => {
   async function fetchData(){
 
     try{
-       const response =   await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=fr&units=metric&appid=2948eccdc30baaeb3ad5a74151b84eb1`);
+       const response =   await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=fr&units=metric&appid=2948eccdc30baaeb3ad5a74151b84eb1`);
        const json = await response.json();
        console.log(json)
         setTemp(json.main.temp);
