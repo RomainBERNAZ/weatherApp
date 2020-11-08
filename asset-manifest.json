@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weatherApp/static/css/main.02d44ce6.chunk.css",
+    "main.css": "/weatherApp/static/css/main.a5044b9f.chunk.css",
     "main.js": "/weatherApp/static/js/main.d29627a4.chunk.js",
     "main.js.map": "/weatherApp/static/js/main.d29627a4.chunk.js.map",
     "runtime-main.js": "/weatherApp/static/js/runtime-main.e2ee7564.js",
@@ -10,14 +10,14 @@
     "static/js/3.296c06d7.chunk.js": "/weatherApp/static/js/3.296c06d7.chunk.js",
     "static/js/3.296c06d7.chunk.js.map": "/weatherApp/static/js/3.296c06d7.chunk.js.map",
     "index.html": "/weatherApp/index.html",
-    "static/css/main.02d44ce6.chunk.css.map": "/weatherApp/static/css/main.02d44ce6.chunk.css.map",
+    "static/css/main.a5044b9f.chunk.css.map": "/weatherApp/static/css/main.a5044b9f.chunk.css.map",
     "static/js/2.562d0984.chunk.js.LICENSE.txt": "/weatherApp/static/js/2.562d0984.chunk.js.LICENSE.txt",
     "static/media/App.css": "/weatherApp/static/media/Morganite-ExtraBold.2c40b022.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.e2ee7564.js",
     "static/js/2.562d0984.chunk.js",
-    "static/css/main.02d44ce6.chunk.css",
+    "static/css/main.a5044b9f.chunk.css",
     "static/js/main.d29627a4.chunk.js"
   ]
 }
