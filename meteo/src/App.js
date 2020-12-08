@@ -15,7 +15,7 @@ const cityFinal = city.charAt(0).toUpperCase() + city.slice(1)
 const tempFinal = Math.round(temp);
 
   if (tempFinal===0){
-  document.getElementById('temperature').style.display='none';
+  //  document.getElementById('temperature').style.display='none';
   }else {
     document.getElementById('temperature').style.display='block';
   }
@@ -24,13 +24,21 @@ const tempFinal = Math.round(temp);
 
 useEffect (() => {
 
+
+  if (cityFinal){
+    fetchData();
+    setInput('');
+    document.getElementById('span').style.display="inline-flex";
+  } else {
+    setTemp(null);
+    setImage(null);
+    document.getElementById('span').style.display="none";
+  }
+
   async function fetchData(){
-
-
     try{
        const response =   await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityFinal}&lang=fr&units=metric&appid=2948eccdc30baaeb3ad5a74151b84eb1`);
        const json = await response.json();
-       console.log(json.message)
 
        if(json.message === 'city not found'){
         document.getElementById('errorweather').style.display='block'
@@ -43,9 +51,6 @@ useEffect (() => {
         document.getElementById('errorweather').style.display='none'
 
        }
-
-      
-        
     }catch(error) {
         setTemp(null);
         setImage(null);
@@ -54,15 +59,7 @@ useEffect (() => {
     }
   }
   
-  if (cityFinal !== ''){
-    fetchData();
-    setInput('');
-    document.getElementById('span').style.display="inline-flex";
-  } else {
-    setTemp(null);
-    setImage(null);
-    document.getElementById('span').style.display="none";
-  }
+ 
   
 },[cityFinal]);
 
@@ -78,15 +75,15 @@ useEffect (() => {
 
       <div className="inputLink">
       <input id="inputweather"value={input} onChange={e =>setInput(e.target.value)} type="text" placeholder="City..."/>
-                <button type="submit"><i class="fas fa-search"></i></button>
+                <button type="submit"><i className="fas fa-search"></i></button>
       </div>
           <h3 id="errorweather" className="errorweather">La ville recherchée ne semble pas exister ou est mal orthographiée.</h3>
 
         </form>
         <h2 className="city">{cityFinal}</h2>
          <img src={logo} alt=""/> 
-         <div className="temperature">
-         <h3 id="temperature">{tempFinal}<span id="span">°C</span></h3>
+         <div id="temperature"className="temperature">
+          <h3>{tempFinal}<span id="span">°C</span></h3>
          </div>
          <div className="return">
             <a href="https://romainbernaz.github.io/portfolioV2/"><button>BACK</button></a>
