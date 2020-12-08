@@ -25,33 +25,47 @@
 
 }
 .card{
-  padding-top: 10vh;
+  position: relative;
+  left: 50%;
   text-align: center;
+  transform: translateX(-50%);
+  padding-top: 10vh;
+  width: 50%;
   form{
-    display: inline-flex;
-  input{
-    border: 2px solid black;
-    outline: none;
-    height: 3vh;
-    min-width: 30%;
-    border-radius: 10px;
-    border-right: none;
-    font-size: 1.5rem;
-    padding-left: 0.5vw;
-  }
-  button{
-    border-left: none;
-    background-color: white;
-    padding: 0.25rem;
-    margin-left: -1rem;
-    outline: none;
-    border: solid black 2px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-  button:hover{
-    color: silver;
-  }
+    .inputLink{
+      display: inline-flex;
+      input{
+        border: 2px solid black;
+        outline: none;
+        height: 5vh;
+        min-width: 30%;
+        border-radius: 10px;
+        border-right: none;
+        font-size: 1.5rem;
+        padding-left: 0.5vw;
+      }
+     
+      button{
+        border-left: none;
+        background-color: white;
+        padding: 0.25rem;
+        margin-left: -1rem;
+        outline: none;
+        border: solid black 2px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      button:hover{
+        color: silver;
+      }
+
+    }
+    h3 {
+      display: none;
+      margin-top: 4.5vh;
+      font-size: 2.5vh;
+    }
+ 
 }
   h2{
     padding-top: 5vh;
@@ -67,7 +81,8 @@
   }
   .return{
     button{
-      height: 4vh;
+      margin-top: 5vh;
+      height: 5vh;
       width: 7vw;
       font-family: Morganite;
       font-size: 3rem;
@@ -87,12 +102,13 @@
 
   .App{
     height: 100vh;
-    background-color: silver;
+    width: 100vw;
+    background-color: #A49C9B;
   .titre{
     text-align: center;
     
     h1{
-      padding-top: 2vh;
+      padding-top: 1vh;
       font-size: 6rem;
       font-family: Morganite;
       span{
@@ -102,10 +118,15 @@
   
   }
   .card{
-    padding-top: 10vh;
+    position: relative;
     text-align: center;
+    padding-top: 10vh;
+    width: 100vw;
     form{
-      display: inline-flex;
+      display: block;
+      .inputLink{
+        display: inline-flex;
+        height: 5vh;
     input{
       border: 2px solid black;
       outline: none;
@@ -133,6 +154,8 @@
     button:hover{
       color: silver;
     }
+  }
+  
   }
     h2{
       padding-top: 5vh;

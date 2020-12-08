@@ -11,6 +11,14 @@ const [ city, setCity] = useState('');
 const [ input, setInput] = useState('');
 const logo = "https://openweathermap.org/img/w/" + image + ".png";
 
+const cityFinal = city.charAt(0).toUpperCase() + city.slice(1)
+const tempFinal = Math.round(temp);
+
+  if (tempFinal===0){
+  document.getElementById('temperature').style.display='none';
+  }else {
+    document.getElementById('temperature').style.display='block';
+  }
 
 
 
@@ -18,18 +26,37 @@ useEffect (() => {
 
   async function fetchData(){
 
+
     try{
-       const response =   await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=fr&units=metric&appid=2948eccdc30baaeb3ad5a74151b84eb1`);
+       const response =   await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityFinal}&lang=fr&units=metric&appid=2948eccdc30baaeb3ad5a74151b84eb1`);
        const json = await response.json();
-       console.log(json)
+       console.log(json.message)
+
+       if(json.message === 'city not found'){
+        document.getElementById('errorweather').style.display='block'
+        setTemp(null);
+        setImage(null);
+
+       }else {
         setTemp(json.main.temp);
         setImage(json.weather[0].icon);  
+        document.getElementById('errorweather').style.display='none'
+
+       }
+
+      
         
-    }catch(error) {}
+    }catch(error) {
+        setTemp(null);
+        setImage(null);
+        document.getElementById('span').style.display="none";
+
+    }
   }
   
-  if (city !== ''){
+  if (cityFinal !== ''){
     fetchData();
+    setInput('');
     document.getElementById('span').style.display="inline-flex";
   } else {
     setTemp(null);
@@ -37,7 +64,7 @@ useEffect (() => {
     document.getElementById('span').style.display="none";
   }
   
-},[city]);
+},[cityFinal]);
 
 
   return (
@@ -49,14 +76,17 @@ useEffect (() => {
       <div className="card">
         <form onSubmit={e => {e.preventDefault(); setCity(input);}}>
 
-          <input value={input} onChange={e =>setInput(e.target.value)} type="text" placeholder="City..."/>
+      <div className="inputLink">
+      <input id="inputweather"value={input} onChange={e =>setInput(e.target.value)} type="text" placeholder="City..."/>
+                <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+          <h3 id="errorweather" className="errorweather">La ville recherchée ne semble pas exister ou est mal orthographiée.</h3>
 
-          <button type="submit"><i class="fas fa-search"></i></button>
         </form>
-        <h2 className="city">{city}</h2>
+        <h2 className="city">{cityFinal}</h2>
          <img src={logo} alt=""/> 
          <div className="temperature">
-         <h3>{temp}<span id="span">°C</span></h3>
+         <h3 id="temperature">{tempFinal}<span id="span">°C</span></h3>
          </div>
          <div className="return">
             <a href="https://romainbernaz.github.io/portfolioV2/"><button>BACK</button></a>

@@ -29,20 +29,25 @@
 }
 
 .App .card {
-  padding-top: 10vh;
+  position: relative;
+  left: 50%;
   text-align: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding-top: 10vh;
+  width: 50%;
 }
 
-.App .card form {
+.App .card form .inputLink {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.App .card form input {
+.App .card form .inputLink input {
   border: 2px solid black;
   outline: none;
-  height: 3vh;
+  height: 5vh;
   min-width: 30%;
   border-radius: 10px;
   border-right: none;
@@ -50,7 +55,7 @@
   padding-left: 0.5vw;
 }
 
-.App .card form button {
+.App .card form .inputLink button {
   border-left: none;
   background-color: white;
   padding: 0.25rem;
@@ -61,8 +66,14 @@
   border-bottom-right-radius: 10px;
 }
 
-.App .card form button:hover {
+.App .card form .inputLink button:hover {
   color: silver;
+}
+
+.App .card form h3 {
+  display: none;
+  margin-top: 4.5vh;
+  font-size: 2.5vh;
 }
 
 .App .card h2 {
@@ -80,7 +91,8 @@
 }
 
 .App .card .return button {
-  height: 4vh;
+  margin-top: 5vh;
+  height: 5vh;
   width: 7vw;
   font-family: Morganite;
   font-size: 3rem;
@@ -96,13 +108,14 @@
 @media screen and (max-width: 890px) {
   .App {
     height: 100vh;
-    background-color: silver;
+    width: 100vw;
+    background-color: #A49C9B;
   }
   .App .titre {
     text-align: center;
   }
   .App .titre h1 {
-    padding-top: 2vh;
+    padding-top: 1vh;
     font-size: 6rem;
     font-family: Morganite;
   }
@@ -110,15 +123,21 @@
     color: white;
   }
   .App .card {
-    padding-top: 10vh;
+    position: relative;
     text-align: center;
+    padding-top: 10vh;
+    width: 100vw;
   }
   .App .card form {
+    display: block;
+  }
+  .App .card form .inputLink {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    height: 5vh;
   }
-  .App .card form input {
+  .App .card form .inputLink input {
     border: 2px solid black;
     outline: none;
     height: 5vh;
@@ -128,7 +147,7 @@
     font-size: 1.5rem;
     padding-left: 0.5vw;
   }
-  .App .card form button {
+  .App .card form .inputLink button {
     border-left: none;
     height: 5vh;
     background-color: white;
@@ -139,10 +158,10 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
   }
-  .App .card form button i {
+  .App .card form .inputLink button i {
     font-size: 3vh;
   }
-  .App .card form button:hover {
+  .App .card form .inputLink button:hover {
     color: silver;
   }
   .App .card h2 {
